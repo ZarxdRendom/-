@@ -1,120 +1,772 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cat2.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <title>Cat</title>
-  </head>
-  <body>
-    <div class="wrapper-no7">
-      <div class="logo">I Love You</div>
-      <div class="animation-wrapper">
-        <div class="cat-wrapper">
-          <svg
-            class="cat"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 207.68 163.77"
-            preserveAspectRatio="none">
-            <title>cat</title>
-            <g class="body">
-              <circle class="body-backcircle" cx="76.86" cy="83.31" r="45.5" />
-              <circle
-                class="body-frontcircle"
-                cx="150.86"
-                cy="83.31"
-                r="45.5" />
-              <rect
-                class="body-between"
-                x="74.65"
-                y="37.89"
-                width="83.04"
-                height="90.61" />
-            </g>
-            <circle class="head" cx="161.76" cy="52.75" r="45.92" />
-            <g class="eyes">
-              <circle class="eyes-l" cx="153.51" cy="46.5" r="8.25" />
-              <circle class="eyes-r" cx="185.76" cy="46.5" r="8.25" />
-            </g>
-            <g class="ears">
-              <polygon
-                class="ears-l"
-                points="132.76 19 132.76 0 149.55 8.81 132.76 19" />
-              <polygon
-                class="ears-r"
-                points="179.44 11.2 197 4.06 195.16 22.9 179.44 11.2" />
-            </g>
-            <rect
-              class="tail"
-              x="-11"
-              y="32.87"
-              width="107"
-              height="20"
-              rx="9.58"
-              ry="9.58"
-              transform="translate(41.19 -18.41) rotate(45)" />
-            <g class="backlegs">
-              <path
-                class="backlegs1"
-                d="M74,124.85a6,6,0,0,0-4.7-7.07l-4.41-.89a6,6,0,0,0-7.07,4.7l-6.31,31.35a8.25,8.25,0,1,0,15.64,5,5.94,5.94,0,0,0,.44-1.33Z"
-                transform="translate(-1.58 -0.92)" />
-              <path
-                class="backlegs2"
-                d="M88.22,125.86a6,6,0,0,0-4.38-7.27l-4.37-1.08a6,6,0,0,0-7.27,4.38l-7.69,31a8.25,8.25,0,1,0,15.41,5.72,5.94,5.94,0,0,0,.5-1.31Z"
-                transform="translate(-1.58 -0.92)" />
-            </g>
-            <g class="frontlegs">
-              <path
-                class="frontlegs1"
-                d="M162.89,120.91a6,6,0,0,0-7.65-3.68L151,118.72a6,6,0,0,0-3.68,7.65l10.57,30.18a8.25,8.25,0,1,0,16-3.65,5.94,5.94,0,0,0-.3-1.37Z"
-                transform="translate(-1.58 -0.92)" />
-              <path
-                class="frontlegs2"
-                d="M175.77,120.08a6,6,0,0,0-7.48-4l-4.31,1.3a6,6,0,0,0-4,7.48l9.22,30.62a8.25,8.25,0,1,0,16.17-2.94,5.94,5.94,0,0,0-.24-1.38Z"
-                transform="translate(-1.58 -0.92)" />
-            </g>
-          </svg>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Zarxdofficial : Bio data saya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #F5E6D3;
+            --secondary-color: yellow;
+            --accent-color: #FF9E5E;
+            --text-color: #2C3E50;
+            --background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, rgba(130, 50, 50, 0.8), rgba(0, 0, 255, 0.5));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Desain utama untuk kontainer utama */
+        .container {
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 600px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: filter 1.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Efek lampu glow */
+        .glow {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: red;
+            border-radius: 50%;
+            opacity: 0.5;
+            filter: blur(16px);
+            animation: float 2s infinite alternate;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            100% {
+                transform: translateY(-20px) translateX(20px) scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 1rem;
+                max-width: 80%;
+                width: 400px;
+            }
+        }
+        
+        /* Bagian judul utama di atas */
+        .atas .judul {
+            position: relative;
+            text-align: left;
+            top: 20%;
+            margin-top: -5px;
+            color: red;
+            border-radius: 30px;
+            padding: 10px;
+        }
+        
+        /* Ukuran emoji di judul */
+        .emojiJudul {
+            font-size: 30px;
+        }
+
+        /* Animasikeun emoji nu melambai */
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            15% { transform: rotate(15deg); }
+            30% { transform: rotate(-10deg); }
+            45% { transform: rotate(15deg); }
+            60% { transform: rotate(-10deg); }
+            70% { transform: rotate(10deg); }
+            80% { transform: rotate(0deg); }
+            90% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+      
+        .wave {
+            display: inline-block;
+            animation: wave 3s ease-in-out infinite;
+            transform-origin: 70% 70%;
+        }
+  
+        .judul2 {
+            position: relative;
+            text-align: center;
+            color: white;
+            transition: transform 1.5s ease;
+            font-weight: bold;
+        }
+        
+        .judul2:hover {
+          transform: scale(1.1);
+        }
+        
+        .kenalan {
+            position: relative;
+            color: red;
+            font-size: 18px;
+            top: -25px;
+            font-weight: bold;
+        }
+        
+        /* Desain tombol navigasi */
+        .nav {
+            text-decoration: none;
+            display: inline-block;
+            color: red;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: transparent;
+            transition: transform 0.5s ease; 
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            border-radius: 30px;
+            padding: 15px;
+        }
+        
+        .nav:hover {
+            transform: scale(1.1);
+        }
+        
+        .mushroom {
+            font-size: 40px;
+            position: absolute;
+            margin-top: 20px;
+            animation: ciluk 1.7s ease forwards 5s;
+            transform: rotate(12deg);
+        }
+        
+        @keyframes ciluk {
+            0% { margin-top: 20px; }
+            80% { margin-top: -30px; }
+            100% { margin-top: 20px; }
+        }
+        
+        .randomMushroom {
+          font-size: 40px;
+          position: absolute;
+          top: -90px;
+          left: 260px;
+          transform: rotate(200deg);
+          animation: ciluk2 1.7s ease forwards 1.5s;
+        }
+        
+        @keyframes ciluk2 {
+          0% { top: -90px; }
+          80% { top: -13px; }
+          100% { top: -90px; }
+        }
+       
+        /* Setélan halaman nu disembunyikan heula */
+        .page {
+          display: none;
+          opacity: 0; 
+          transition: opacity 0.5s ease; 
+        }
+        
+        .active {
+          display: block;
+          opacity: 1;
+        }
+        .page h2:not(.judul2):not(.judul):not(.kenalan) {
+          color: red;
+           position: relative;
+           text-align: left;
+           top: 20%;
+           margin-top: -5px;
+           padding: 10px;
+        }
+        
+        .page p {
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          position: relative;
+          text-align: center;
+          top: -8px;
+          transition: color 1.5s ease, transform 1.5s ease;
+        }
+        
+        .page p:hover {
+          transform: scale(1.1);
+        }
+        
+        .page .bio ul {
+         list-style-type: none;
+         position: relative;
+         text-align: left;
+         top: -15px;
+        }
+        
+        .page .bio li {
+          color: red;
+          border-left: 4px solid red;
+          margin: 4px;
+          padding-left: 5px;
+        }
+        
+        .judulAwal {
+          color: white;
+          z-index: 1;
+          text-align: left;
+          margin-left: 20px;
+        }
+        
+        .judulAwal .fa-solid {
+          padding-left: 4px;
+        }
+        
+      .background {
+          position: absolute;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          font-weight: bold;
+      }
+      
+      .copyright {
+        color: white;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        text-decoration: none;
+        font-weight: bold;
+        padding-bottom: 26px;
+        pointer-events: none;
+        text-align: center;
+      }
+      
+      .none {
+        display: none;
+      }
+      
+      .pukulOne {
+        animation: mampusOne 1.1s ease forwards;
+        position: absolute;
+      }
+      
+@keyframes mampusOne {
+    0% {
+        top: -13px; /* Mulai dari -30px */
+        transform: translateX(0) scale(1) rotate(200deg);
+    }
+    10% {
+        transform: translateX(-10px) scale(1.1) rotate(200deg); /* Bergeser sedikit ke kiri dan membesar */
+    }
+    20% {
+        transform: translateX(10px) rotate(200deg); /* Bergeser sedikit ke kanan */
+    }
+    30% {
+        transform: translateX(-5px) rotate(200deg); /* Kembali ke kiri sedikit */
+    }
+    40% {
+        transform: translateX(5px) rotate(200deg); /* Kembali ke kanan sedikit */
+    }
+    70% {
+        top: -90px; /* Perubahan margin-top di akhir animasi */
+        transform: translateX(0) scale(1); /* Kembali ke posisi normal */
+    }
+    100% {
+        top: -90px; /* Tetap di posisi akhir */
+    }
+}
+
+      .pukulTwo {
+        animation: mampusTwo 1.1s ease forwards;
+        position: absolute;
+      }
+      
+@keyframes mampusTwo {
+    0% {
+        margin-top: -30px; /* Mulai dari -30px */
+        transform: translateX(0) scale(1) rotate(12deg);
+    }
+    10% {
+        transform: translateX(-10px) scale(1.1); /* Bergeser sedikit ke kiri dan membesar */
+    }
+    20% {
+        transform: translateX(10px); /* Bergeser sedikit ke kanan */
+    }
+    30% {
+        transform: translateX(-5px); /* Kembali ke kiri sedikit */
+    }
+    40% {
+        transform: translateX(5px); /* Kembali ke kanan sedikit */
+    }
+    70% {
+        margin-top: 20px; /* Perubahan margin-top di akhir animasi */
+        transform: translateX(0) scale(1); /* Kembali ke posisi normal */
+    }
+    100% {
+        margin-top: 20px; /* Tetap di posisi akhir */
+    }
+}
+
+.cursor {
+    position: absolute;
+    width: 30px; /* Lebar cursor */
+    height: 30px; /* Tinggi cursor */
+    border-radius: 50%; /* Membuat cursor berbentuk lingkaran */
+    background-color: rgba(255, 255, 255, 0.8); /* Warna putih */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Efek cahaya lebih kuat */
+    pointer-events: none; /* Agar cursor tidak mengganggu interaksi dengan elemen lain */
+    transform: translate(-50%, -50%); /* Mengatur posisi agar cursor terletak di tengah */
+    z-index: 1;
+    transition: transform 0.1s; /* Transisi untuk gerakan halus */
+}
+
+.trail {
+    position: absolute;
+    width: 40px; /* Lebar trail */
+    height: 40px; /* Tinggi trail */
+    border-radius: 50%; /* Membuat trail berbentuk lingkaran */
+    background-color: rgba(255, 255, 255, 0.5); /* Warna putih */
+    pointer-events: none; /* Agar trail tidak mengganggu interaksi */
+    opacity: 0; /* Mulai dengan transparan */
+    transition: opacity 0.4s, transform 0.4s; /* Transisi untuk efek fade dan gerakan */
+    z-index: 21;
+    transform: translate(-50%, -50%) scale(0.5); /* Kecil saat tidak terlihat */
+}
+
+.loading {
+  overflow: none;
+  position: absolute;
+  text-align: center;
+  padding-left: 10px;
+  z-index: 9000;
+  font-size: 6rem;
+  opacity: 0;
+  transition: display 1.5s ease; opacity 1.5s ease;
+  text-shadow: 0px 1px 10px black;
+}
+
+.loading-active {
+  filter: blur(5px); /* Apply blur effect when loading */
+  overflow: hidden;
+}
+
+.none {
+  display: none;
+  overflow: hidden;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5); /* Biru semi-transparan */
+ /* Warna overlay semi transparan */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transition: opacity 0.5s ease; /* Transisi untuk fade-in */
+  pointer-events: none; /* Agar tidak mengganggu klik saat loading selesai */
+  
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  pointer-events: all; /* Mencegah interaksi */
+}
+
+.blur-effect {
+  filter: blur(5px); /* Menambahkan blur */
+  pointer-events: none; /* Nonaktifkan klik saat blur */
+}
+
+.swal2-container {
+            z-index: 9999; /* Nilai ini dapat disesuaikan */
+        }
+    </style>
+
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
+
+<body>
+  <div class="cursor"></div>
+<div class="loading-overlay">
+  <div class="loading">🧌</div> <!-- Loading animasi -->
+</div>
+
+  <div class="trail"></div>
+    <div class="container">
+        <div class="page active" id="home">
+          <div class="atas">
+            <small>
+            <h2 class="judul">Hai <span class="warnaJudul">Bre</span> <span class="emojiJudul wave">👋</span></h2>
+            </small>
+            </div>
+            <div class="perkenalan">
+            <h2 class="judul2">Saya ZarxdMods</h2>
+            <h2 class="kenalan">Saya seorang developer pemula, asal Indonesia.</h2>
+            </div>
         </div>
-        <div class="logoani">Ilove you</div>
-      </div>
-      <div class="layout notvisible">
-        <div class="layout__nav">
-          <ul class="layout__nav-left">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <ul class="layout__nav-right">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <div class="page" id="contact">
+            <h2>Kontak</h2>
+            <div class="bio">
+            <ul>
+              <li ><i class="fa-solid fa-envelope"></i> zarxdofficial@gmail.com</li>
+              <li ><i class="fa-solid fa-address-book"></i> 62838-3039-9871</li>
+              </ul>
+            <h2>Sosmed</h2>
+            <ul>
+              <li ><i class="fa-brands fa-instagram"></i> zarxdmods</li>
+              <li ><i class="fa-brands fa-telegram"></i> @zarxdofficial</li>
+            </ul>            
         </div>
-        <div class="layout__title"></div>
-        <div class="layout__content">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
-      </div>
-      <button class="restart">restart animation</button>
+        <div class="page" id="biodata">
+            <h2>Biodata</h2>
+            <div class="bio">
+            <p>
+              Nama Asli Saya <span style="color: red">Nizar</span>
+            </p>
+            <ul>
+              <li >Saya developer pemula 👨‍💻</li>
+              <li >Skill saya hanya ada pada javascript, html, css, itupun tidak lancar 😄</li>
+              <li >kesukaan saya adalah menyendiri karena menjadi diri sendiri lebih baik🙂</li>
+              <li >Saya tinggal di sumatera utara, medan 🗺️</li>
+            </ul>
+            </div>
+        </div>
+    <style>
+        .red-text {
+            color: red; /* Mengatur warna teks menjadi merah */
+        }
+    </style>
+</head>
+<body>
+    <div class="page" id="project">
+        <h2 class="red-text">Project</h2>
+        <div class="project">
+            <ul>
+                <li class="red-text"><i class="fa-solid fa-heart"></i><a href="https://www.website-alquran.my.id/" class="red-text"> Website AL-Quran</a></li>
+                <li class="red-text"><i class="fa-solid fa-list-music"></i><a href="https://www.website-alquran.my.id" class="red-text"> Website Playlist</a></li>
+            </ul>
+        </div>
     </div>
-    <script src="cat2.js"></script>
-  </body>
+        <div class="navbar">
+            <button class="nav" data-target="home">Home</button>
+            <button class="nav" data-target="contact">Kontak</button>
+            <button class="nav" data-target="biodata">Biodata</button>
+            <button class="nav" data-target="project">project</button>
+        </div>
+        <div class="mushroom">👨‍💻</div>
+        <div class="randomMushroom">👨‍💻</div>
+    </div>
+    
+    <a class="copyright" href="zaenishi.xyz">Dibuat dengan 💖 oleh zarxdofficial</a>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+function startAnimation() {
+    const container = document.querySelector('.container'); // Elemen yang ingin di-blur
+    const loading = document.querySelector('.loading')
+    const overlay = document.querySelector('.loading-overlay');
+        loading.addEventListener('click', () => {
+            // Efek goyang
+            gsap.to(loading, {
+                duration: 1.5,
+                x: 5,
+                y: -5,
+                ease: "power1.inOut",
+                repeat: 1,
+                yoyo: true
+            });
+        });
+    // Tampilkan overlay dan aktifkan blur
+    container.classList.add('blur-effect');
+    overlay.classList.add('active');
+
+    const totalDuration = 6000; // Total durasi loading
+
+    // Buat animasi loading
+    const tl = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+    });
+
+    tl.to(".loading", {
+        y: -32,
+        opacity: 1,
+        duration: 1.5,
+        ease: "sine.inOut"
+    }).to(".loading", {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: "sine.inOut"
+    });
+
+    // Hentikan loading setelah durasi selesai
+    setTimeout(() => {
+        tl.kill(); // Hentikan animasi
+        container.classList.remove('blur-effect'); // Hapus blur
+        overlay.classList.remove('active'); // Sembunyikan overlay
+    }, totalDuration);
+}
+
+startAnimation();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            
+            const particlesContainer = document.querySelector('.particles');
+            const mushroom = document.querySelector('.mushroom');
+              const mushroomKedua = document.querySelector('.randomMushroom');
+
+        // Fungsi pikeun navigasi antara halaman (page)
+        const buttons = document.querySelectorAll('.nav');
+        const pages = document.querySelectorAll('.page');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-target');
+                const activePage = document.getElementById(target);
+
+                // Sembunyikan sadayana halaman
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                    page.style.opacity = 0;
+                });
+
+                // Tampilkan halaman nu dipilih
+                if (activePage) {
+                    activePage.classList.add('active');
+                    setTimeout(() => {
+                        activePage.style.opacity = 1;
+                    }, 10); // Delay leutik keur transisi
+                }
+            });
+        });
+        
+let currentMushroom = 0; // 0 untuk jamur pertama, 1 untuk jamur kedua
+  
+function spawnJamur() {
+  const mushroom = document.querySelector('.mushroom');
+  const mushroomKedua = document.querySelector('.randomMushroom');
+
+  // Menentukan jamur mana yang aktif saat ini
+  const activeMushroom = currentMushroom === 0 ? mushroom : mushroomKedua;
+  const inactiveMushroom = currentMushroom === 0 ? mushroomKedua : mushroom;
+
+  // Menghapus kelas untuk jamur yang aktif
+  const randomHideTime = Math.floor(Math.random() * 9000) + 9000; // 1 detik hingga 6 detik
+  setTimeout(() => {
+    activeMushroom.classList.add('none'); // Menghapus jamur aktif
+    console.log(`Jamur ${currentMushroom === 0 ? 'pertama' : 'kedua'} dihapus`);
+
+    // Mengubah jamur yang aktif untuk siklus berikutnya
+    currentMushroom = (currentMushroom + 1) % 2; // Bergantian antara 0 dan 1
+
+    // Menambahkan kembali kelas setelah waktu acak untuk jamur yang tidak aktif
+    const randomShowTime = Math.floor(Math.random() * 5000) + 1000; // 1 detik hingga 6 detik
+    setTimeout(() => {
+      inactiveMushroom.classList.remove('none'); // Menambahkan jamur tidak aktif
+      console.log(`Jamur ${currentMushroom === 0 ? 'pertama' : 'kedua'} ditambahkan kembali`);
+
+      // Panggil spawnJamur lagi untuk siklus berikutnya
+      spawnJamur();
+    }, randomShowTime);
+    
+  }, randomHideTime);
+}
+
+// Mulai fungsi saat halaman dimuat
+window.onload = () => {
+  spawnJamur();
+};
+
+mushroom.addEventListener('click', function(e) {
+  mushroom.classList.add('pukulTwo')
+  setTimeout(() => {
+    mushroom.classList.remove('pukulTwo')
+  }, 6000)
+})
+
+mushroomKedua.addEventListener('click', function(e) {
+  mushroomKedua.classList.add('pukulOne')
+  setTimeout(() => {
+    mushroomKedua.classList.remove('pukulOne')
+  }, 6000)
+})
+
+const cursor = document.querySelector('.cursor');
+const trail = document.querySelector('.trail');
+let timeout; // Variabel untuk menyimpan timeout
+let isVisible = true; // Status untuk menampilkan atau menyembunyikan cursor dan trail
+
+function updateCursorPosition(x, y) {
+    // Atur posisi cursor
+    cursor.style.left = `${x}px`;
+    cursor.style.top = `${y}px`;
+
+    // Atur posisi trail
+    trail.style.left = `${x}px`;
+    trail.style.top = `${y}px`;
+
+    // Tampilkan trail dengan efek fade-in
+    trail.style.opacity = 1;
+    trail.style.transform = 'translate(-50%, -50%) scale(1)'; // Besar saat muncul
+
+    // Hapus timeout sebelumnya jika ada
+    clearTimeout(timeout);
+
+    // Setelah 300ms, sembunyikan trail
+    timeout = setTimeout(() => {
+        trail.style.opacity = 0;
+        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
+    }, 300); // Durasi trail terlihat
+}
+
+// Event untuk touchmove
+document.addEventListener('touchmove', (event) => {
+    if (isVisible) {
+        const touch = event.touches[0]; // Ambil titik sentuh pertama
+        updateCursorPosition(touch.clientX, touch.clientY);
+    }
+});
+
+// Event untuk touchstart
+document.addEventListener('touchstart', (event) => {
+    if (isVisible) {
+        const touch = event.touches[0]; // Ambil titik sentuh pertama
+        updateCursorPosition(touch.clientX, touch.clientY);
+    }
+});
+
+// Event untuk mousemove
+document.addEventListener('mousemove', (event) => {
+    if (isVisible) {
+        updateCursorPosition(event.clientX, event.clientY);
+    }
+});
+
+// Event untuk mousedown
+document.addEventListener('mousedown', (event) => {
+    if (isVisible) {
+        updateCursorPosition(event.clientX, event.clientY);
+    }
+});
+
+// Event untuk touchend dan mouseup
+document.addEventListener('touchend', () => {
+    if (isVisible) {
+        trail.style.opacity = 0;
+        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
+    }
+});
+
+document.addEventListener('mouseup', () => {
+    if (isVisible) {
+        trail.style.opacity = 0;
+        trail.style.transform = 'translate(-50%, -50%) scale(0.5)'; // Kembali ke ukuran kecil
+    }
+});
+
+// Event untuk double click
+document.addEventListener('dblclick', () => {
+    isVisible = !isVisible; // Toggle status tampil/tersembunyi
+
+    // Menampilkan atau menyembunyikan cursor dan trail
+    if (isVisible) {
+        cursor.style.display = 'block';
+        trail.style.display = 'block';
+    } else {
+        cursor.style.display = 'none';
+        trail.style.display = 'none';
+    }
+});
+
+    // GSAP Animation saat halaman dimuat
+    gsap.from(".judul", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out",
+    });
+
+    gsap.from(".judul2", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        ease: "elastic.out(1, 0.5)",
+        delay: 0.5
+    });
+
+    gsap.from(".kenalan", {
+        opacity: 0,
+        x: 100,
+        duration: 1,
+        ease: "back.out(1.7)",
+        delay: 1
+    });
+
+    gsap.from(".navbar button", {
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        delay: 1.2,
+        stagger: 0.2 // Animasi bertahap untuk tiap tombol
+    });
+    
+    gsap.from(".judulAwal", {
+      x: -200,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    })
+    
+    gsap.from(".copyright", {
+      y: 200,
+      opacity: 0,
+      duration: 0.9,
+      ease: "power2.out",
+      
+    })
+    
+        });
+    </script>
+
+</body>
 </html>
